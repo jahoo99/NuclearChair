@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
-{
+{ 
     private CharacterController controller;
     private Vector3 playerVelocity;
     
@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        controller.enabled = true;
     }
    
 
