@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f0a9cdd55a8f76d4bb8b769e1d109034
+=======
+guid: 5a3a0420f2345d649914e93563daaf3a
+>>>>>>> Darek
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
