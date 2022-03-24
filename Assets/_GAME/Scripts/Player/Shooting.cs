@@ -10,10 +10,7 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hitData;
-            Physics.Raycast(ray, out hitData);
-            Debug.Log(hitData.distance);
+            Debug.Log("chuj");
         }
 
 

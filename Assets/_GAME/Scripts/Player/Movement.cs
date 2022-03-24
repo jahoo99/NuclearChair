@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     
-    private float playerSpeed = 6.0f;
+    [SerializeField]private float playerSpeed = 6.0f;
     
     private void Awake()
     {

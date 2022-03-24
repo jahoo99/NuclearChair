@@ -1822,8 +1822,6 @@ GameObject:
   - component: {fileID: 843074681}
   - component: {fileID: 843074680}
   - component: {fileID: 843074679}
-  - component: {fileID: 843074678}
-  - component: {fileID: 843074684}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -1831,18 +1829,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &843074678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843074677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ac068e2f98a5c408f95d50b5a43611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!143 &843074679
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1938,22 +1924,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &843074684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843074677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d01ce928f9f9540ad662cc062ce8fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _radius: 0
-  _enemyLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &875165286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2149,17 +2119,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 118b2b630ee11ea41bd83f4959f0594b, type: 2}
+    - target: {fileID: -4216859302048453862, guid: f0a9cdd55a8f76d4bb8b769e1d109034, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f0a9cdd55a8f76d4bb8b769e1d109034, type: 3}
       propertyPath: m_Name
       value: Lower_platform_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a9cdd55a8f76d4bb8b769e1d109034, type: 3}
---- !u!4 &1090964642 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f0a9cdd55a8f76d4bb8b769e1d109034, type: 3}
-  m_PrefabInstance: {fileID: 1090964641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127788288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2751,6 +2720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35e78a57faeca643825ee2b1c686fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 2
 --- !u!136 &1536690461
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3026,7 +2996,7 @@ Transform:
   - {fileID: 1596770129}
   - {fileID: 1127788289}
   - {fileID: 1242421237}
-  - {fileID: 1090964642}
+  - {fileID: 1853195114}
   - {fileID: 1394401651}
   - {fileID: 1575817185}
   - {fileID: 675758755}
@@ -3415,6 +3385,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797104016}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1853195114 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f0a9cdd55a8f76d4bb8b769e1d109034, type: 3}
+  m_PrefabInstance: {fileID: 1090964641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1897280296
 GameObject:
   m_ObjectHideFlags: 0

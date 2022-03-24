@@ -7,6 +7,8 @@ public class LookingAtEnemy : MonoBehaviour
     [SerializeField]private float _radius;
     [SerializeField]private LayerMask _enemyLayer;
     private Transform _nearestEnemy;
+    private bool _idented = false; //zeruje rotacje XD
+
     private void Update()
     {
         Collider[] _enemy = Physics.OverlapSphere(transform.position, _radius, _enemyLayer);
@@ -16,14 +18,17 @@ public class LookingAtEnemy : MonoBehaviour
             if (_enemy.Length > 0)
             {
                 transform.LookAt(_enemy[0].transform.position);
+                _idented = false;
             }
-            else
+            else if(!_idented)
             {
+                transform.parent.rotation = Quaternion.identity;
                 transform.rotation = Quaternion.identity;
+                _idented = true;
             }
         }
         
-        
+     
     }
     private void OnDrawGizmos()
     {
