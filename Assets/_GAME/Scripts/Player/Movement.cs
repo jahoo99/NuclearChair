@@ -6,25 +6,30 @@ public class Movement : MonoBehaviour
 { 
     private CharacterController controller;
     private Vector3 playerVelocity;
+    private float _turnSmoothTime = 0.1f; 
+    private float _turnSmoothVelocity; 
     
     [SerializeField]private float playerSpeed = 6.0f;
     
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
-        controller.enabled = true;
     }
    
 
     void Update()
     {
         
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
-
-        if (move != Vector3.zero)
+        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        if (direction.magnitude >= 0.1f)
         {
-            gameObject.transform.forward = move;
+            float targAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targAngle, ref _turnSmoothVelocity, _turnSmoothTime);
+
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            controller.Move(direction * playerSpeed * Time.deltaTime);
         }
 
         
