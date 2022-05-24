@@ -40,10 +40,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_183934711c25464e8e5c85e76c35a635: 0.75
+    - Vector1_183934711c25464e8e5c85e76c35a635: 0.286
     - Vector1_3eb16f4e0b5c497881880b46d4bf5f2b: 0.9
     - Vector1_852f05135b984d2f96739367532df381: 0.657
-    - Vector1_aad5223617104367852cb63cc2e2afac: 1.2
+    - Vector1_aad5223617104367852cb63cc2e2afac: 0.74
     - Vector1_e1a0fa8be2af495cb7914cf6ebf596c3: 0.01
     m_Colors:
     - Color_97047d7da282421a86b571a5f68601e2: {r: 0.29803923, g: 0.7254902, b: 0.70391357, a: 0.9843137}
