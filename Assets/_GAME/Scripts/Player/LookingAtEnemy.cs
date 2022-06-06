@@ -17,20 +17,9 @@ public class LookingAtEnemy : MonoBehaviour
         {
             if (_enemy.Length > 0)
             {
-                Debug.Log("Idented!");
                 transform.LookAt(_enemy[0].transform.position);
-                _idented = false;
-            }
-            else if(!_idented)
-            {
-                
-                transform.parent.rotation = Quaternion.identity;
-                transform.rotation = Quaternion.identity;
-                _idented = true;
             }
         }
-        
-     
     }
     private void OnDrawGizmos()
     {

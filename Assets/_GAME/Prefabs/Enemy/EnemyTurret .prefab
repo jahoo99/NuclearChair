@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 1094017766860599137}
   - component: {fileID: 50065758}
   - component: {fileID: 50065756}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'EnemyTurret '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
