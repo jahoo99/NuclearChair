@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Movement : MonoBehaviour
+using Photon.Pun;
+public class Movement : MonoBehaviourPun
 { 
     private CharacterController controller;
     private Vector3 playerVelocity;
@@ -19,7 +19,10 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
         Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         if (direction.magnitude >= 0.1f)
         {

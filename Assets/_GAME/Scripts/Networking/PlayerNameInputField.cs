@@ -11,6 +11,7 @@ using System.Collections;
 
 namespace Com.MyCompany.MyGame
 {
+    
     /// <summary>
     /// Player name input field. Let the user input his name, will appear above the player in the game.
     /// </summary>
@@ -36,7 +37,7 @@ namespace Com.MyCompany.MyGame
         void Start()
         {
 
-
+            
             string defaultName = string.Empty;
             TMP_InputField _inputField = this.GetComponent<TMP_InputField>();
             if (_inputField != null)
