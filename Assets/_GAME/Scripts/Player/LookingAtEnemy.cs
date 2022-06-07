@@ -11,6 +11,7 @@ public class LookingAtEnemy : MonoBehaviour
 
     private void Update()
     {
+        
         Collider[] _enemy = Physics.OverlapSphere(transform.position, _radius, _enemyLayer);
         
         for (int i = 0; i <= _enemy.Length; i++)
