@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Movement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        
         Vector3 direction = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal")).normalized;
         if (direction.magnitude >= 0.1f)
         {
