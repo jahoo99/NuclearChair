@@ -1,29 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
-public class Movement : MonoBehaviourPun
-{ 
+
+public class Movement : MonoBehaviour
+{
     private CharacterController controller;
     private Vector3 playerVelocity;
-    private float _turnSmoothTime = 0.1f; 
-    private float _turnSmoothVelocity; 
-    
-    [SerializeField]private float playerSpeed = 6.0f;
-    
+    private float _turnSmoothTime = 0.1f;
+    private float _turnSmoothVelocity;
+
+    [SerializeField] private float playerSpeed = 6.0f;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
     }
-   
+
 
     void Update()
     {
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-        {
-            return;
-        }
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        Vector3 direction = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal")).normalized;
         if (direction.magnitude >= 0.1f)
         {
             float targAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
@@ -35,6 +31,6 @@ public class Movement : MonoBehaviourPun
             controller.Move(direction * playerSpeed * Time.deltaTime);
         }
 
-        
+
     }
 }

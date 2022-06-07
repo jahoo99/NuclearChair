@@ -118,7 +118,7 @@ namespace Com.MyCompany.MyGame
             cameraOffset.z = -distance;
             cameraOffset.y = height;
 
-            cameraTransform.position = new Vector3(this.transform.position.x, this.transform.position.y + height, this.transform.position.z + -distance);
+            cameraTransform.position = new Vector3(this.transform.position.x + distance, this.transform.position.y + height, this.transform.position.z);
             //cameraTransform.position = Vector3.Lerp(cameraTransform.position, this.transform.position + this.transform.TransformVector(cameraOffset), smoothSpeed * Time.deltaTime);
             //cameraTransform.position = Vector3.Lerp(cameraTransform.position, this.transform.position + this.transform.TransformVector(cameraOffset), smoothSpeed * Time.deltaTime);
 

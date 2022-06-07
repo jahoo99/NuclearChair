@@ -994,7 +994,7 @@ Transform:
   m_GameObject: {fileID: 7708626904144587735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.472, z: 0.351}
-  m_LocalScale: {x: 0.40259, y: 0.49760568, z: 0.48339}
+  m_LocalScale: {x: 0.40259, y: 0.16244835, z: 0.48339}
   m_Children: []
   m_Father: {fileID: 8990030394498296682}
   m_RootOrder: 2
@@ -1174,9 +1174,9 @@ GameObject:
   - component: {fileID: 8990030395385701155}
   - component: {fileID: 2089828994}
   - component: {fileID: 4344172742742689786}
-  - component: {fileID: 2089828991}
-  - component: {fileID: 1273624036335156100}
   - component: {fileID: 1704612066}
+  - component: {fileID: -6937723032817826893}
+  - component: {fileID: -2633834751828435546}
   m_Layer: 3
   m_Name: Player 1
   m_TagString: Untagged
@@ -1193,7 +1193,7 @@ Transform:
   m_GameObject: {fileID: 8990030395385701154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9203261, y: -2.58, z: -18.96519}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.11356517, y: 0.11356517, z: 0.11356517}
   m_Children:
   - {fileID: 8990030394498296682}
   - {fileID: 1983505627}
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &2089828991
+--- !u!114 &1704612066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1269,14 +1269,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8990030395385701154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: 10a96aa969fcdfe49b4cd92643ab7048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &1273624036335156100
+  distance: 1.01
+  height: 0.83
+  centerOffset: {x: 0, y: 0, z: 0.29}
+  followOnStart: 1
+  smoothSpeed: 0.125
+--- !u!114 &-6937723032817826893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1293,13 +1294,13 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 0
+  observableSearch: 2
   ObservedComponents:
-  - {fileID: 2089828991}
+  - {fileID: -2633834751828435546}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &1704612066
+--- !u!114 &-2633834751828435546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1308,11 +1309,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8990030395385701154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10a96aa969fcdfe49b4cd92643ab7048, type: 3}
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10
-  height: 7.99
-  centerOffset: {x: 0, y: 0, z: 0}
-  followOnStart: 0
-  smoothSpeed: 0.125
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
