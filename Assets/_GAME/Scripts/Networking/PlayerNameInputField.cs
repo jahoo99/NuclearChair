@@ -70,7 +70,7 @@ namespace Com.MyCompany.MyGame
             InputField inputField = GetComponent<InputField>();
             string value;
             value = GetComponent<TMP_InputField>().text;
-            Debug.Log(value);
+           // Debug.Log(value);
             //value = inputField.text;
             if (string.IsNullOrEmpty(value))
             {

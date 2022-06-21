@@ -62,6 +62,7 @@ namespace Com.MyCompany.MyGame
             // Start following the target if wanted.
             if (followOnStart)
             {
+                Debug.Log("Dzia³a");
                 OnStartFollowing();
             }
         }

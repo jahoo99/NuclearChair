@@ -756,6 +756,18 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1704612066, guid: 6c0758dfd538ae14183d506b434c065d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704612066, guid: 6c0758dfd538ae14183d506b434c065d, type: 3}
+      propertyPath: followOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805012553628124969, guid: 6c0758dfd538ae14183d506b434c065d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8990030395385701154, guid: 6c0758dfd538ae14183d506b434c065d, type: 3}
       propertyPath: m_Name
       value: Player
